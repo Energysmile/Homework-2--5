@@ -28,4 +28,13 @@ public class Validator {
             throw new WrongPasswordException("Пароли не совпадают!");
         }
     }
+
+    public static void validateComplete(String login, String password, String confirmPassword) {
+        if (LOGIN_PATTERN.matcher(login).matches() && PASSWORD_PATTERN.matcher(password).matches() && password.equals(confirmPassword)) {
+
+            System.out.println("Добро пожаловать!");
+        } else {
+            System.out.println("Повторите попытку");
+        }
+    }
 }
