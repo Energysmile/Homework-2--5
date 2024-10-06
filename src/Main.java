@@ -3,9 +3,9 @@ import Exception.WrongPasswordException;
 
 public class Main {
     public static void main(String[] args) {
-        String login = "login";
+        String login = "login!";
         String password = "qwert12345";
-        String confirmPassword = "qwert12345!";
+        String confirmPassword = "qwert12345";
 
         try {
             Validator.validate(login, password, confirmPassword);
